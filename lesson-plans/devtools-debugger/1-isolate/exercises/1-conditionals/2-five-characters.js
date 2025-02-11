@@ -1,10 +1,10 @@
 'use strict';
-
-let input = prompt('enter something with 5 characters:');
-
+// Default value before asking for user input
+let input = 'Sajid';
+input = prompt('enter something with 5 characters:') || input ; // Keep default if input is empty
 let message = '';
 if (input === null) {
-  message = ':(';
+  message = ':('; // Won't be shown since input is always assigned a value
 } else if (input.length < 5) {
   message = 'too short';
 } else if (input.length === 5) {
@@ -12,7 +12,10 @@ if (input === null) {
 } else {
   message = 'too long';
 }
-
+// Ensure we never show ":(" and don't always show "thank you!"
+if (message === ':(') {
+  message = 'Please enter something!';
+}
 alert(message);
 
 /*  ===== Challenges =====
