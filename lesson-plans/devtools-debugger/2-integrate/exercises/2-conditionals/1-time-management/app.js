@@ -1,11 +1,4 @@
-import {
-  whenFormDataChanges,
-  readBoolean,
-  displayString,
-} from '../../../../../../lib/dom-io/index.js';
-
-whenFormDataChanges('sleep-info', () => {
-  debugger;
+'use strict';
 
   console.log('--- form data changed ---');
 
@@ -33,8 +26,6 @@ whenFormDataChanges('sleep-info', () => {
   // --- display the advice ---
 
   // display a string to the <pre> with id "advice-area"
-  displayString('advice-area', advice);
-});
 
 /*  ===== Challenges =====
 
