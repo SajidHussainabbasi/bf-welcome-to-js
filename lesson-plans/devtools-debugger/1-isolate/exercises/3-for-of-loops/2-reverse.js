@@ -11,8 +11,10 @@ for (let nextChar of toReverse) {
 }
 
 let transformation = toReverse + ' -> ' + backwards;
-
+let backIn= backwards + ' -> ' + toReverse;
 alert(transformation);
+alert(backIn);
+
 
 /*  ===== Challenges =====
   - Put the characters back in the right order after the string was reversed.

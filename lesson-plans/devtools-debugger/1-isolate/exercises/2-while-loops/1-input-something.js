@@ -1,11 +1,11 @@
 'use strict';
 
 let input = null;
-while (input === null) {
-  input = prompt('input something:');
+while (true) { // infinite loop
+  input = prompt('you are stuck! input something:');
 }
 
-alert('thank you!');
+alert('this will never be reached');
 
 /*  ===== Challenges =====
   - Try to create an infinite loop so the user gets stuck inside your prompt.
