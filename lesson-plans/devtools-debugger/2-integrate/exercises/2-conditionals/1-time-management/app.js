@@ -1,5 +1,9 @@
 'use strict';
-
+import {
+  whenFormDataChanges,
+  readBoolean,
+  displayString,
+} from '../../../../../../lib/dom-io/index.js';
   console.log('--- form data changed ---');
 
   // --- read user input ---
@@ -19,7 +23,7 @@
     advice = 'Study some flashcards.';
   } else if (isTired && !hasTime) {
     advice = 'Make some coffee.';
-  } else if (!isTired && !hasTime) {
+  } else   {
     advice = 'Have a great day!';
   }
 

@@ -1,3 +1,4 @@
+'use strict'
 import {
   whenFormDataChanges,
   readString,
@@ -11,36 +12,34 @@ whenFormDataChanges('search-input', () => {
   console.log('--- form data changed ---');
 
   // --- read the user's input ---
-
   let searchThis = readString('text');
   let findThis = readString('query');
-
   let caseSensitive = readBoolean('sensitive');
 
   // --- do the search ---
-
   let doesExist = false;
+  let position = -1;
 
-  if (caseSensitive) {
-    doesExist = searchThis.includes(findThis);
-  } else {
+  if (!caseSensitive) {  // NOT case-sensitive search
     let smallSearchThis = searchThis.toLowerCase();
     let smallFindThis = findThis.toLowerCase();
-    doesExist = smallSearchThis.includes(smallFindThis);
+    position = smallSearchThis.indexOf(smallFindThis);
+    doesExist = position !== -1;
+  } else {  // Case-sensitive search
+    position = searchThis.indexOf(findThis);
+    doesExist = position !== -1;
   }
 
   // --- create the message ---
-
   let message = '';
 
   if (doesExist) {
-    message = 'yes';
+    message = `"${findThis}" was found at position ${position}.`;
   } else {
-    message = 'no';
+    message = `"${findThis}" was not found in the text.`;
   }
 
   // --- display the search results ---
-
   displayString('search-result', message);
 });
 

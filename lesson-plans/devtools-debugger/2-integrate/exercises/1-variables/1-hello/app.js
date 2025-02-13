@@ -12,11 +12,11 @@
   // --- read user input first name and last name ---
 
   let firstname = prompt('Enter the First name');
-
   console.log(firstname);
- let lastname = prompt('Enter the First name');
 
-  console.log(lastname);
+ let lastname = prompt('Enter the First name');
+ console.log(lastname);
+
   // --- create a message hello ---
 
   let greeting1 = ' Hello ';
@@ -24,6 +24,6 @@
 
   let greeting2 =  firstname + ' ' + lastname +'!';
 
-  // --- display the message ---
+  // --- display the message with good bye with complete name  ---
 
   console.log('\ngood bye ', greeting2);

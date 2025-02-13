@@ -26,23 +26,19 @@ whenFormDataChanges('reversify', () => {
 
   console.log(reversed);
 
-  // --- set to upper or lower case ---
-
+   // --- set to upper or lower case based on length ---
   let finalText = '';
-  if (screaming) {
+  if (text.length <= 5) {
+    finalText = reversed.toLowerCase();
+  } else if (text.length > 10) {
     finalText = reversed.toUpperCase();
   } else {
-    finalText = reversed.toLowerCase();
+    finalText = reversed; // Keep original case for medium-length inputs
   }
-
   console.log(finalText);
-
   // --- display the final text ---
-
-  // display the final text to the <pre> with id "out"
   displayString('out', finalText);
 });
-
 /*  ===== Challenges =====
 
   - change the condition so upper/lower case depends on the length of the input

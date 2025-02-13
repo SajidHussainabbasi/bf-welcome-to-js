@@ -11,15 +11,16 @@ whenFormDataChanges('input', () => {
 
   // --- read the user's input ---
 
-  let userText = readString('to-mirror');
+ let userText = readString('to-mirror');
+ let middleChar = readString('middle-char'); // New input for the middle character
 
   // --- mirror the text ---
-
-  let mirrored = ' | ';
+  let leftSide = userText.toLowerCase();
+  let rightSide ='';
   for (let char of userText) {
-    mirrored = char + mirrored + char;
+    rightSide = char.toUpperCase() + rightSide; // mirror soide in uppercase
   }
-
+   let mirrored = leftSide + ' ' + ' '+ middleChar + ' ' +' ' + rightSide;
   // --- display the result ---
 
   displayString('output', mirrored);

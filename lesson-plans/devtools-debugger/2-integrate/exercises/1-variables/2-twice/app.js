@@ -1,29 +1,4 @@
-// these are the only functions you will need
-import {
-  whenFormDataChanges,
-  readString,
-  displayString,
-} from '../../../../../../lib/dom-io/index.js';
-
-whenFormDataChanges('user-data', () => {
-  debugger;
-
-  console.log('\n--- form data changed ---');
-
-  // --- read user input ---
-
-  // read a string from the <input> with id "to-double"
-  let text = readString('to-double');
-
-  // --- repeat the text ---
-
-  let repeated = text + '\n' + text;
-
-  // --- display the repeated text ---
-
-  // display a string to the <pre> with id "doubled-input"
-  displayString('doubled-input', repeated);
-});
+' use stict'
 
 /*  ===== Challenges =====
 
@@ -35,3 +10,10 @@ whenFormDataChanges('user-data', () => {
     4. asdf
 
 */
+let userInput = null;
+while(userInput == null){
+userInput  = prompt('Enter the text'); // Take the user input
+}
+for(i=0; i<4; i++){
+  console.log(i+1 +'.' +' '+ userInput) // Number the copies into 4 and diplay with numbers
+}
