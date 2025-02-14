@@ -1,3 +1,4 @@
+'use strict'
 import {
   whenFormDataChanges,
   readString,
@@ -11,16 +12,19 @@ whenFormDataChanges('input', () => {
 
   // --- read the user's input ---
 
- let userText = readString('to-mirror');
- let middleChar = readString('middle-char'); // New input for the middle character
-
+  let userText = readString('to-mirror');
+  let middleChar = readString('middle-char'); // New input for the middle character
+    if (middleChar !== '&' && middleChar !== '|' && middleChar !== '*'){
+    displayString('output', '');
+    return;
+    }
   // --- mirror the text ---
   let leftSide = userText.toLowerCase();
-  let rightSide ='';
+  let rightSide = '';
   for (let char of userText) {
     rightSide = char.toUpperCase() + rightSide; // mirror soide in uppercase
   }
-   let mirrored = leftSide + ' ' + ' '+ middleChar + ' ' +' ' + rightSide;
+  let mirrored = leftSide + ' ' + ' ' + middleChar + ' ' + ' ' + rightSide;
   // --- display the result ---
 
   displayString('output', mirrored);
