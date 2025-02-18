@@ -8,20 +8,20 @@ console.log('--- in execution phase ---');
 /*
   environment:
 
-  name:
-  message:
+  name:SyntaxError
+  message:Invalid left-hand side in assignment
 
-  location:
+  location:line 25
 
-  life cycle:
+  life cycle:in execution phase
 
-  the mistake:
+  the mistake:true = isHappy;
 
   the fix(es):
 */
 
 let isHappy = false;
 
-true = isHappy;
+ isHappy = true;
 
 

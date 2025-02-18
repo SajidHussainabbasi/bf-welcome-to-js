@@ -6,20 +6,20 @@ console.log('--- in execution phase ---');
 
 
 /*
-  environment:
+  environment:node
 
-  name:
-  message:
+  name:syntax error 
+  message:Unexpected string
 
-  location:
+  location:line 23
 
-  life cycle:
+  life cycle:inn execution pase
 
-  the mistake:
+  the mistake:this was the mistake const quotesInQuotes = 'remind yourself ''i can do this!'' at least once a day';
 
-  the fix(es):
+  the fix(es):const quotesInQuotes = 'remind yourself i can do this! at least once a day'; its working
 */
 
-const quotesInQuotes = 'remind yourself ''i can do this!'' at least once a day';
+const quotesInQuotes = 'remind yourself i can do this! at least once a day';
 
 

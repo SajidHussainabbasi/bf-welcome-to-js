@@ -3,20 +3,20 @@
 console.log('--- in execution phase ---');
 
 /*
-  environment:
+  environment:node
 
-  name:
-  message:
+  name:SyntaxError
+  message:Identifier 'tree' has already been declared
 
-  location:
+  location:line 22
 
-  life cycle:
+  life cycle:in execution phase
 
-  the mistake:
+  the mistake:declare again with same name tree 
 
-  the fix(es):
+  the fix(es): rename with let tree1 = 'birch';its working
 */
 
 let tree = 'oak';
 
-let tree = 'birch';
+let tree1 = 'birch';

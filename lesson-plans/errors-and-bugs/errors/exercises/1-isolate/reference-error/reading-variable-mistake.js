@@ -5,18 +5,19 @@ console.log('--- in execution phase ---');
 /*
   environment:
 
-  name:
-  message:
+  name:reference error
+  message:anonymous
 
-  location:
+  location:line 20
 
-  life cycle:
+  life cycle:in execution phase
 
-  the mistake:
+  the mistake:line 20 console.log(tomatoes); reading variable which is declared after
 
-  the fix(es):
+  the fix(es): I have cut(console.log(tomatoes);) and paste on line 23 to read the varibale
 */
 
-console.log(tomatoes);
+
 
 let tomatoes = 'fresh';
+console.log(tomatoes);

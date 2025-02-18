@@ -5,18 +5,20 @@ import {
 } from '../../../../../../../lib/dom-io/index.js';
 
 /*
-  environment:
+  environment:node
 
-  name:
-  message:
+  name:ReferenceError
+  message:DisplayString is not defined
 
-  location:
+  location:line 46
 
-  life cycle:
+  life cycle:inside execution phase
 
-  the mistake:
+  the mistake:DisplayString is not defined
 
-  the fix(es):
+  the fix(es):displayString(d was in uper case) and also add else{
+    advice = ' Never mind';
+   }
 */
 
 whenFormDataChanges('sleep-info', () => {
@@ -37,11 +39,13 @@ whenFormDataChanges('sleep-info', () => {
     advice = 'Study some flashcards.';
   } else if (isTired && !hasTime) {
     advice = 'Make some coffee.';
-  } else if (!isTired && !hasTime) {
+  } else if(!isTired && !hasTime){
     advice = 'Have a great day!';
-  }
+  } else{
+    advice = ' Never mind';
+   }
 
   // --- display the advice ---
 
-  DisplayString('advice-area', advice);
+  displayString('advice-area', advice);
 });

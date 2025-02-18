@@ -1,4 +1,5 @@
 // these are the only functions you will need
+
 import {
   whenFormDataChanges,
   readString,
@@ -6,10 +7,10 @@ import {
 } from '../../../../../../../lib/dom-io/index.js';
 
 /*
-  environment:
+  environment:node
 
-  name:
-  message:
+  name:Uncaught SyntaxError
+  message:Cannot use import statement outside a module
 
   location:
 
@@ -29,7 +30,7 @@ whenFormDataChanges('user-data', () => {
 
   // --- repeat the text ---
 
-  let repeated + text + '\n' + text;
+  let repeated = text + '\n' + text;
 
   // --- display the repeated text ---
 

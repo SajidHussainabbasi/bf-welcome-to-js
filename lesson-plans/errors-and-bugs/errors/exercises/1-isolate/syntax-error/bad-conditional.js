@@ -6,25 +6,25 @@ console.log('--- in execution phase ---');
 
 
 /*
-  environment:
+  environment:node
 
-  name:
-  message:
+  name:SyntaxError
+  message:Unexpected token '{'
 
-  location:
+  location:lie 27
 
-  life cycle:
+  life cycle:in execution phase
 
-  the mistake:
+  the mistake:there was only else 
 
-  the fix(es):
+  the fix(es):on line 27 I just add if after else and its working
 */
 
 let userName = 'indrogo';
 
 if (userName.length < 3) {
   console.log('too short');
-} else (userName.length < 5) {
+} else if (userName.length < 5) {
   console.log('just right');
 } else {
   console.log('too long');

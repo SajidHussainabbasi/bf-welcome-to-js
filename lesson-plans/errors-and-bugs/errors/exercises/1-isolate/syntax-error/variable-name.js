@@ -9,19 +9,19 @@ console.log('--- in execution phase ---');
 /*
   environment:
 
-  name:
-  message:
+  name:SyntaxError
+  message:Unexpected number
 
-  location:
+  location:line 25
 
-  life cycle:
+  life cycle:in execution phase
 
-  the mistake:
+  the mistake:given wrong name to variable const 3 = 'three';
 
-  the fix(es):
+  the fix(es):declare const three = 'three';
 */
 
 
-const 3 = 'three';
+const three = 'three';
 
 

@@ -8,10 +8,10 @@
     ':)' -> ':!)!'
 
 
-  experiment 1
-    line:
-    why:
-    trying:
+  experiment 1 bug 
+    line:line 25 
+    why:beacsue of wrong logic and thatb was for the reversing the string or input string
+    trying: I have made changes to excited +=character+'!'; then I have been really exited to solve the problem
 
 */
 
@@ -22,7 +22,7 @@ while (text === null) {
 
 let excited = '';
 for (const character of text) {
-  excited = character + '!';
+  excited +=character+'!';
 }
 
 alert(excited);

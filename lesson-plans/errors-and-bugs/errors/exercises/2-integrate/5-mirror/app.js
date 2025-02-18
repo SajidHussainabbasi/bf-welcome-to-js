@@ -5,22 +5,22 @@ import {
 } from '../../../../../../../lib/dom-io/index.js';
 
 /*
-  environment:
+  environment:node
 
-  name:
-  message:
+  name:SyntaxError
+  message:Invalid left-hand side expression in prefix operation (at app.js:23:17)
 
-  location:
+  location:line 23
 
-  life cycle:
+  life cycle:inside execution phase
 
-  the mistake:
+  the mistake: console.log(--- form data changed ---);
 
-  the fix(es):
+  the fix(es): console.log('--- form data changed ---');
 */
 
 whenFormDataChanges('input', () => {
-  console.log(--- form data changed ---);
+  console.log('--- form data changed ---');
 
   // --- read the user's input ---
 

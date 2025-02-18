@@ -5,18 +5,18 @@ console.log('--- in execution phase ---');
 /*
   environment:
 
-  name:
-  message:
+  name: reference  error
+  message:anonymous
 
-  location:
+  location:line 20
 
-  life cycle:
+  life cycle:in execution phase
 
   the mistake:
 
-  the fix(es):
+  the fix(es): declare by using let 
 */
 
-welf = 'ingrad';
+ let welf = 'ingrad';
 
 console.log(welf);

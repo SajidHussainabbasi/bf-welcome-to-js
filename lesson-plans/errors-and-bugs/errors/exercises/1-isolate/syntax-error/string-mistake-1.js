@@ -6,21 +6,20 @@ console.log('--- in execution phase ---');
 
 
 /*
-  environment:
+  environment:node
 
-  name:
-  message:
+  name:SyntaxError
+  message: Invalid or unexpected token
 
-  location:
+  location:line 23
 
-  life cycle:
+  life cycle:in execution phase
 
-  the mistake:
+  the mistake:string declaration error which goes on next line 
 
-  the fix(es):
+  the fix(es):made declaration according to syntax on same line  const a = 'this is two lines'; we can use baktik on multiple line strings
 */
 
-const a = 'this is
-two lines';
+const a = 'this is two lines';
 
 
