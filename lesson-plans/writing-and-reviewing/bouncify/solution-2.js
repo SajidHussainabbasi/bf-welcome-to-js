@@ -23,3 +23,38 @@
       '0 . x . 0'         -> '0 . X . 0'
 
 */
+let userIput = '';
+
+
+while (true) {
+  userIput = prompt('enter some text, the letters will be bouncified');
+
+
+
+  if(userIput === null){
+  alert('no empty input, try again.');
+  }
+ if(userIput === ''){
+   alert('there is no escape!');
+   }
+  if(userIput){
+  break;
+     }
+}
+
+ let result = '';
+  let toggle = true; 
+  for (let i = 0; i < userIput.length; i++) {
+    let char = userIput[i];
+    if (char >= 'a' && char <= 'z' || char >= 'A' && char <= 'Z') {
+      if (toggle) {
+        result += char.toUpperCase();
+      } else {
+        result += char.toLowerCase();
+      }
+      toggle = !toggle; 
+    } else {
+      result += char; 
+    }
+  }
+ alert(result);
